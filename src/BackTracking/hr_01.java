@@ -21,22 +21,22 @@ public class hr_01 {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int m = 0;
+        System.out.println("Length of First Array");
+        int m = sc.nextInt();
         int[] num1 = new int[m];
-        m = sc.nextInt();
         for (int i = 0; i<num1.length; i++) {
+            System.out.println("Element"+i);
             num1[i] = sc.nextInt();
         }
-        int n = 0;
+        System.out.println("Length of Second Array");
+        int n = sc.nextInt();
         int[] num2 = new int[n];
-        n = sc.nextInt();
         for (int j = 0; j<num2.length; j++) {
+            System.out.println("Element"+j);
             num2[j] = sc.nextInt();
         }
         int[] arr3 =new int[m+n];
         MergeArrays(num1,num2,m,n,arr3);
         System.out.println(arr3[(m+n)/2]);
-
     }
-
 }

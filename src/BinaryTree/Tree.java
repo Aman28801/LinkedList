@@ -9,9 +9,12 @@ public class Tree {
         int data;
         Node left;
         Node right;
+        private Node root;
+
         public Node(int data) {
             this.data = data;
         }
+
         static Node CreateTree() {
             Node root =null;
             System.out.println("Enter Data: ");
@@ -27,6 +30,7 @@ public class Tree {
             root.right = CreateTree();
             return root;
         }
+
         static void InOrder(Node root){
             if(root == null) return;
             InOrder(root.left);
@@ -47,13 +51,35 @@ public class Tree {
         }
     }
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        Node root = CreateTree();
-        InOrder(root);
-        System.out.println();
-        PreOrder(root);
-        System.out.println();
-        PostOrder(root);
 
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Choice");
+//        System.out.println("1. Create Tree");
+//        System.out.println("2. Traverse Your Tree");
+//        System.out.println("3. Find Any Element");
+//        int Choice =sc.nextInt();
+//        switch(Choice){
+//            case 1:
+                Node root =CreateTree();
+//                System.out.println("Tree Created");
+//                return;
+//                break;
+//            case 2:
+//                System.out.println("What type of Traverse You Want");
+//                System.out.println("1.InOrder");
+//                System.out.println("2.PostOrder");
+//                System.out.println("3.PreOrder");
+//                int b =sc.nextInt();
+//                switch (b) {
+//                    case 1 -> InOrder();
+//                    case 2 -> PostOrder();
+//                    case 3 -> PreOrder();
+//                }
+//            case 3:
+//                System.out.println("Which Element");
+               // find(20);
+//                int c=sc.nextInt();
+//                break;
+//        }
     }
 }
